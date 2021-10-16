@@ -1,0 +1,60 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mathcommands}
+
+% Commands for standard sets in mathematics.
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+% Commands for trigonometric functions that automatically provide the correctly sized delimeters.
+\def\mysin#1{\text{sin}\left(#1\right)}
+\def\mycos#1{\text{cos}\left(#1\right)}
+\def\mytan#1{\text{tan}\left(#1\right)}
+\def\mycsc#1{\text{csc}\left(#1\right)}
+\def\mysec#1{\text{sec}\left(#1\right)}
+\def\mycot#1{\text{cot}\left(#1\right)}
+
+\def\sinsq#1{\text{sin}^2\left(#1\right)}
+\def\cossq#1{\text{cos}^2\left(#1\right)}
+
+\def\cis#1{\text{cis}\left(#1\right)}
+
+% Provides commands for standard Number Theory notaion.
+\def\lcm#1{\text{lcm}\left(#1\right)}
+\def\mod#1{\hspace{8pt}(\text{mod } #1)}
+
+% Provides the new counter for the theorem, lemmas and corollaries.
+\newcounter{theorem}[section]
+
+% Provides the theorem environment.
+\newenvironment{theorem}{
+    \vspace{5pt}\par\stepcounter{theorem}\textbf{Theorem \thesection.\thetheorem}\hspace{40pt}\itshape
+}{
+    \normalfont\vspace{5pt}\par
+}
+
+% Provides the lemma environment.
+\newenvironment{lemma}{
+    \vspace{5pt}\par\stepcounter{theorem}\textbf{Lemma \thesection.\thetheorem}\hspace{40pt}\itshape
+}{
+    \normalfont\vspace{5pt}\par
+}
+
+% Provides the corollary environment.
+\newenvironment{corollary}{
+    \vspace{5pt}\par\stepcounter{theorem}\textbf{Corollary \thesection.\thetheorem}\hspace{40pt}\itshape
+}{
+    \normalfont\vspace{5pt}\par
+}
+
+\newenvironment{proof}{
+    \vspace{5pt}\par\textit{Proof.}\ 
+}{
+    \hfill$\square$\vspace{5pt}\par
+}
+
+
+
+
