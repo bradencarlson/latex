@@ -28,33 +28,88 @@
     \examtrue
 }
 
+% defines a new if, to be used in the teacher/student options
+% this will be used to determine wheather the title and other options will print
+% in a format that the teacher sees or what the student should see.
+\newif\ifteacher
+\teacherfalse
+
+
+% defines the teacher option, this is the default
+\DeclareOption{teacher}{
+    \teachertrue
+}
+% defines the student option
+\DeclareOption{student}{
+    \teacherfalse
+}
+
+
+\newif\ifmargins
+\marginsfalse
+\DeclareOption{halfinchmargins}{
+    \marginsfalse
+}
+% this is the default
+\DeclareOption{inchmargins}{
+    \marginstrue
+}
+
 % Execute the default options
 \ExecuteOptions{10pt}
 \ExecuteOptions{homework}
+\ExecuteOptions{teacher}
+\ExecuteOptions{inchmargins}
 
+% process the options given in the document
 \ProcessOptions\relax
 
 \LoadClass{article}
 
 % If the exam option is selected, then format the title this way:
 \ifexam
-    \renewcommand{\maketitle}{
-        \begin{center}{\Large \textbf{\@title}}\\
-        {\@author}\\
-        {\@course}\\
-        {\rule{4in}{0.4pt}}\end{center}
-    }
+    \ifteacher    
+        \renewcommand{\maketitle}{
+            \begin{center}{\Large \textbf{\@title}}\\
+            {\@author}\\    % author is required when using teacher mode
+            {\@course}\\
+            {\rule{4in}{0.4pt}}\end{center}
+        }
+    \else
+        \renewcommand{\maketitle}{
+            \noindent{\Large\textbf{\@title}}\\
+            {\@course}\hfill{Name: \underline{\hspace{2in}}}\\
+            \rule{\textwidth}{0.4pt}
+            
+        }
+    \fi
 % If the assignment option is selected, then format the title this way:
 \else
-    \renewcommand{\maketitle}{
-       \noindent{\Large \textbf{\@title}}\\
-       \@course\hfill\@author\\
-       \rule{\textwidth}{0.4pt}
-    }
+    \ifteacher
+        \renewcommand{\maketitle}{
+            \noindent{\Large \textbf{\@title}}\\
+            \@course\hfill\@author\\    %author is required when using teacher mode
+            \rule{\textwidth}{0.4pt}
+        }
+    \else
+        \renewcommand{\maketitle}{
+            \noindent{\Large\textbf{\@title}}\\
+            \@course\hfill Name: \underline{\hspace{2in}}\\
+            \rule{\textwidth}{0.4pt}
+        }
 \fi
 
-\usepackage{stix,amsmath,amstext}
-\usepackage[margin=1in]{geometry}
+
+
+\usepackage{amsmath,amstext}
+
+\ifmargins
+    \usepackage[margin=1in]{geometry}
+\else
+    \usepackage[margin=0.5in]{geometry}
+\fi
+
+
 \usepackage{amssymb}
 \usepackage{tikz}
 
