@@ -60,4 +60,5 @@
     {\Large\@title}\\
     {\@course\hfill\ifteacherview KEY\else Name: \underline{\hspace{1.5in}}\fi}\\
     \rule{\textwidth}{.4pt}
+    \vspace{.25in}
 }
