@@ -39,10 +39,9 @@
 \long\gdef\part#1{\par\stepcounter{partNumber}\ifinProblem\leftskip=5em\alph{partNumber}\else\leftskip=2em\alph{partNumber}\fi)\hspace{1em} #1\par}
 
 \newenvironment{problem}{
-    \par
     \inProblemtrue
     \setcounter{partNumber}{0}
-    \stepcounter{problemNumber}\textbf{\theproblemNumber}\leftskip=2em 
+    \stepcounter{problemNumber}\textbf{\theproblemNumber)}\hspace{1em} 
 }{
     \setcounter{partNumber}{0}
     \inProblemfalse
@@ -54,4 +53,12 @@
         #1
     \else
     \fi
+}
+
+
+\renewcommand{\maketitle}{
+    {\Large\@title}\\
+    {\@course\hfill\ifteacherview KEY\else Name: \underline{\hspace{1.5in}}\fi}\\
+    \rule{\textwidth}{.4pt}
+    \vspace{.25in}
 }
