@@ -22,11 +22,12 @@
 \def\cis#1{\text{cis}\left(#1\right)}
 
 % standard commands for algebra
-\def\tr#1{\text{tr}\left(#1\right)}
-\def\det#1{\text{det}\left(#1\right)}
+\def\tr(#1){\text{tr}\left(#1\right)}
+\def\det(#1){\text{det}\left(#1\right)}
 \def\im#1{\text{Im}\left(#1\right)}
 \def\aut#1{\text{Aut}\left(#1\right)}
 \def\inn#1{\text{Inn}\left(#1\right)}
+\def\gal(#1){\text{Gal}\left(#1\right)}
 
 % Provides commands for standard Number Theory notaion.
 \def\lcm#1{\text{lcm}\left(#1\right)}
@@ -37,29 +38,45 @@
 
 % Provides the theorem environment.
 \newenvironment{theorem}{
-    \vspace{5pt}\par\stepcounter{theorem}\textbf{Theorem \thesection.\thetheorem}\hspace{40pt}\itshape
+    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Theorem \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
 
 % Provides the lemma environment.
 \newenvironment{lemma}{
-    \vspace{5pt}\par\stepcounter{theorem}\textbf{Lemma \thesection.\thetheorem}\hspace{40pt}\itshape
+    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Lemma \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
 
 % Provides the corollary environment.
 \newenvironment{corollary}{
-    \vspace{5pt}\par\stepcounter{theorem}\textbf{Corollary \thesection.\thetheorem}\hspace{40pt}\itshape
+    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Corollary \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
 
+% Provides the proof environment
 \newenvironment{proof}{
-    \vspace{5pt}\par\textit{Proof.}\ 
+    \vspace{5pt}\par\noindent\textit{Proof.}\ 
 }{
     \hfill$\square$\vspace{5pt}\par
 }
+
+% Provides the definition environment
+\newenvironment{definition}{
+		\vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Definition \thesection.\thetheorem}\hspace{5pt}
+}{
+    \vspace{5pt}\par
+}
+
+% Provides the example environment.
+\newenvironment{example}{
+		\vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Example \thesection.\thetheorem}\hspace{5pt}
+}{
+		\vspace{5pt}\par
+}
+
 
 
