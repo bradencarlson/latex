@@ -38,7 +38,11 @@
 
 % Provides the theorem environment.
 \newenvironment{theorem}{
-    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Theorem \thesection.\thetheorem}\hspace{5pt}\itshape
+    \stepcounter{theorem}
+    \makeatletter
+    \def\@currentlabel{\thesection.\thetheorem}%
+    \makeatother
+    \vspace{5pt}\par\noindent\textbf{Theorem \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
