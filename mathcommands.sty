@@ -49,14 +49,22 @@
 
 % Provides the lemma environment.
 \newenvironment{lemma}{
-    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Lemma \thesection.\thetheorem}\hspace{5pt}\itshape
+    \stepcounter{theorem}
+    \makeatletter
+    \def\@currentlabel{\thesection.\thetheorem}%
+    \makeatother
+    \vspace{5pt}\par\noindent\textbf{Lemma \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
 
 % Provides the corollary environment.
 \newenvironment{corollary}{
-    \vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Corollary \thesection.\thetheorem}\hspace{5pt}\itshape
+    \stepcounter{theorem}
+    \makeatletter
+    \def\@currentlabel{\thesection.\thetheorem}
+    \makeatother
+    \vspace{5pt}\par\noindent\textbf{Corollary \thesection.\thetheorem}\hspace{5pt}\itshape
 }{
     \normalfont\vspace{5pt}\par
 }
@@ -70,14 +78,22 @@
 
 % Provides the definition environment
 \newenvironment{definition}{
-		\vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Definition \thesection.\thetheorem}\hspace{5pt}
+        \stepcounter{theorem}
+        \makeatletter
+        \def\@currentlabel{\thesection.\thetheorem}
+        \makeatother
+		\vspace{5pt}\par\noindent\textbf{Definition \thesection.\thetheorem}\hspace{5pt}
 }{
     \vspace{5pt}\par
 }
 
 % Provides the example environment.
 \newenvironment{example}{
-		\vspace{5pt}\par\stepcounter{theorem}\noindent\textbf{Example \thesection.\thetheorem}\hspace{5pt}
+        \stepcounter{theorem}
+        \makeatletter
+        \def\@currentlabel{\thesection.\thetheorem}
+        \makeatother
+		\vspace{5pt}\par\noindent\textbf{Example \thesection.\thetheorem}\hspace{5pt}
 }{
 		\vspace{5pt}\par
 }

@@ -61,9 +61,9 @@
 \newlength{\mainlength}
 \newlength{\commentlength}
 
-% set the default values to 7.5 inches for the main 
+% set the default values to 7.25 inches for the main 
 % length and 2.5 inches for the comment length. 
-\setlength{\mainlength}{7.5in}
+\setlength{\mainlength}{7.25in}
 \setlength{\commentlength}{2.25in}
 
 % define the content command, which takes 3 arguments, 
