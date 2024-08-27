@@ -7,7 +7,7 @@ The way that I like to install these files into my texlive distribution is
 to save these files into a hidden directory in my home folder, then creating 
 links to them in the directory
 ``` 
-    /use/share/texmf/tex/latex/custom
+    /usr/share/texmf/tex/latex/custom
 ```
 where the `custom` folder is a folder that I created in the texmf tree 
 for holding the links to my class files.  
