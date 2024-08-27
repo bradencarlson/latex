@@ -41,7 +41,7 @@
 \newenvironment{problem}{
     \inProblemtrue
     \setcounter{partNumber}{0}
-    \stepcounter{problemNumber}\textbf{\theproblemNumber)}\hspace{1em} 
+    \stepcounter{problemNumber}\textbf{\theproblemNumber}\hspace{1em} 
 }{
     \setcounter{partNumber}{0}
     \inProblemfalse
@@ -60,5 +60,5 @@
     {\Large\@title}\\
     {\@course\hfill\ifteacherview KEY\else Name: \underline{\hspace{1.5in}}\fi}\\
     \rule{\textwidth}{.4pt}
-    \vspace{.25in}
+    \vspace{.05in}
 }
