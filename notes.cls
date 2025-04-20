@@ -1,3 +1,8 @@
+% Notes class file. 
+% Written by Braden Carlson 2024. 
+% Used primarily to keep track of two different versions of 
+% a given document (usually my personal lecture notes), one in 'presentation'
+% format and another in 'nopresentation' format. 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{notes}
 
