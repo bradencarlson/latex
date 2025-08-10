@@ -1,11 +1,20 @@
 % Notes class file. 
-% Written by Braden Carlson 2024. 
-% Used primarily to keep track of two different versions of 
-% a given document (usually my personal lecture notes), one in 'presentation'
-% format and another in 'nopresentation' format. 
+% Author: Braden Carlson 2024. 
+%
+% Prepares lecture notes that are landscape oriented, with two columns. One of
+% which is 7.25 inches wide by default, the other 2.25 inches. The largest of
+% these is used to display the skeleton notes for the lecture, while the other is
+% used to display comments to the Lecturer. One can then configure their
+% presentation tools to show the main column while the comment column remains
+% out of sight to the students. 
+%
+% This class also supports a 'presentation' mode, as well as a 'nopresentation'
+% mode. The 'presentation' mode is as described above, while the 'nopresentation'
+% mode is a portrait oriented document with both the skeleton notes from the
+% 'presentation' mode, as well as the lecture content. 
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{notes}
-
 
 \newif\ifpresentation
 
@@ -24,6 +33,8 @@
 
 
 \ifpresentation
+    % Set the page settings for presentation mode. The default column widths are
+    % created later. 
     \pagestyle{empty}
     \setlength{\paperwidth}{11in}
     \setlength{\paperheight}{8.5in}
@@ -35,15 +46,10 @@
     \setlength{\headsep}{18pt}
     \setlength{\textheight}{542pt}
 
-%     \setlength{\textwidth}{542pt}
-%     \setlength{\marginparwidth}{2.25in}
-%     \setlength{\marginparsep}{.25in}
-
     \setlength{\textwidth}{722pt}
-%     \setlength{\marginparwidth}{2.25in}
-%     \setlength{\marginparsep}{.25in}
 
 \else
+    % Set the page settings for nopresentation mode. 
     \setlength{\paperwidth}{8.5in}
     \setlength{\paperheight}{11in}
     \setlength{\hoffset}{0pt}
@@ -71,11 +77,12 @@
 \setlength{\mainlength}{7.25in}
 \setlength{\commentlength}{2.25in}
 
-% define the content command, which takes 3 arguments, 
+% define the content command, which takes 4 arguments, 
 % as follows: 
-%     - the presentation content
-%     - the solution content
-%     - the comment content
+%   - the skeleton notes content
+%   - additional things to show in presentation mode 
+%   - things to show in nopresentation mode
+%   - the comment content (only visible in presentation mode)
 \long\def\content#1#2#3#4{
     \ifpresentation
         \def\argtwo{#2}
@@ -90,6 +97,5 @@
         \phantom{#2}{#3}
     \fi
 }
-
 
 \endinput
