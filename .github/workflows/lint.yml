@@ -1,0 +1,14 @@
+name: Run ChkTeX
+on: [push]
+jobs: 
+  lint: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Install ChkTeX
+      - run: |
+         "apt install texlive-binextras"
+      - name: Check Out 
+        uses: actions/checkout@v4
+      - run: "echo \"Code checked out to runner.\""
+      - name: Lint LaTeX
+      - run: "chktex $(git ls-files *.cls *.sty)"
