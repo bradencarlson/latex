@@ -11,25 +11,31 @@ the lecture notes in a single place.
 
 <details>
 <summary>Linux</summary>
-I prefer the following: 
-```
+I prefer the following:
+
+```bash
 mkdir ~/.settings
 cd ~/.settings
 git clone https://github.com/bradencarlson/lecturenotes.git
 ```
+
 Then (with `sudo` or as root)
-```
+
+```bash
 mkdir /usr/share/texmf/tex/latex/custom
 cd /usr/share/texmf/tex/latex/custom
 ln -s ./notes.cls ~/.settings/lecturenotes/notes.cls
-ln -s ./mathcommands.sty ~/.settings/notes/mathcommands.cls
+ln -s ./mathcommands.sty ~/.settings/lecturenotes/mathcommands.cls
 texhash
 ```
+
 This allows the files to reside in your home directory while being available
-anywhere on the machine. Now simple use 
-```
+anywhere on the machine. Now simply use 
+
+```tex
 \documentclass{notes}
 ```
+
 in the preamble of a TeX file to use the class. 
 </details>
 
