@@ -1,0 +1,207 @@
+%% Lecture 1 Notes 
+
+\subsection{Definitions and Examples}
+
+\content{
+\begin{definition} A \textbf{linear equation} in variables $x_1,x_2,\dots x_n$ is an equation that 
+can be written in the form 
+$$ a_1x_1+a_2x_2+\cdots +a_nx_n=b $$
+where $a_1,a_2,\dots,a_n, $ and $b$ are real or complex numbers. The numbers $a_1,a_2,\dots, a_n$ are 
+called the \textbf{coefficients} of the equation.
+\end{definition}
+}{ % presentation
+}{ % nopresentation
+}{% comments
+}
+
+\content{
+\begin{example} Determine whether each of the following is a linear equation. 
+\begin{enumerate}
+		\item $ 5x-3y=0 $
+		\item $ (1+i)x_1^2-2x_1x_2+3x_2=i $, where $i^2=-1$.
+		\item $ \frac{1}{x}-y=5 $
+\end{enumerate}
+\end{example}
+}{ % presentation 
+\vspace{2in}
+}{% nopresentation
+Solution: 
+		\begin{enumerate}
+				\item This is a linear equation since it is of the form in the definition above.
+				\item This is \textbf{not} a linear equation.  The presence of the $x_1^2$, as well 
+						as the $x_1x_2$ show that it is not of the form in the definition, and in fact, 
+						cannot be put into the form above, so this is not linear.
+				\item This is also not a linear equation.  Similarly to number 2, this equation cannot 
+						be manipulated into the correct form for a linear equation, so it is not linear. 
+		\end{enumerate}
+}{% comments
+}
+
+\content{
+\begin{definition} A system of linear equations is called a \textbf{linear system}.
+\end{definition}
+
+\begin{example} The following is an example of a linear system.
+\begin{eqnarray*}
+		5x-3y+z &=&0 \\
+		2x+y-2z &=& 1
+\end{eqnarray*}
+\end{example}
+}{% presentation
+}{% nopresentation
+}{% comments
+}
+
+\content{
+\begin{definition} Given a linear system in variables $x_1,x_2,\dots, x_n$, we say that 
+$(s_1,s_2,\dots, s_n)$ is a \textbf{solution} to the linear system if upon substituting $s_1$ for $x_1$, $s_2$ for 
+$x_2$, \dots, and $s_n$ for $x_n$, each linear equation in the system is satisfied. The set of all 
+solutions to a linear system is called a \textbf{solution set}.
+\end{definition}
+
+\begin{definition} Given a linear system, we say that the system is \textbf{consistent} if there exists at least 
+one solution.  If a linear system has no solution, then we say that the system is \textbf{inconsistent}. 
+\end{definition}
+}{% presentation
+}{% nopresentation
+}{% comments
+}
+
+\content{
+\begin{example} In the above linear system,
+\begin{eqnarray*}
+		5x-3y+z &=&0 \\
+		2x+y-2z &=& 1
+\end{eqnarray*}
+It is easily verified that $(\frac{3}{11},\frac{5}{11},0)$ is a solution 
+by substituting $x=\frac{3}{11}$, $y=\frac{5}{11}$, and $z=0$.
+\end{example}
+}{% presentation
+\vspace{2in}
+}{% nopresentation
+Note that 
+$$ 5\left(\frac{3}{11}\right) - 3\left(\frac{5}{11}\right) +0 = 0 $$
+and 
+$$ 2\left(\frac{3}{11}\right) +\frac{5}{11}-0 = \frac{11}{11} = 1. $$
+So this system is consistent, since it has at least one solution.
+}{% comments
+}
+
+\subsection{Matrices}
+
+\content{
+Consider the following linear system:
+
+\begin{equation}\label{eqn:linear-sys}
+		\begin{array}{rrrr}
+		 5x & -3y & +2z &= 0 \\
+		-x & +y & &= 2 \\
+		 &-y & +z &= 1
+\end{array}
+\end{equation}
+
+We can summarize the left hand side of this linear system by writing all the coefficients 
+of each variable in a rectangular array like so:
+
+\begin{equation*}\label{eqn:coeff-matrix}
+		\left(\begin{array}{rrr}
+				5 & -3 & 2   \\
+				-1 & 1 & 0  \\
+				0 & -1 & 1 
+		\end{array}\right)
+\end{equation*}
+}{% presentation
+}{% nopresentation
+Note that the first column of this array corresponds to the coefficients 
+of the variable $x$, the second column 
+is the coefficients of the variable $y$, and the last column is the coefficients 
+of the variable $z$.  Similarly, 
+each row corresponds to one of the equations of the system. 
+}{% comments
+}
+
+\content{
+\begin{definition}
+This is called the \textbf{coefficient matrix} of the system (\ref{eqn:linear-sys}). 
+We could also summarize this linear system by adding the three numbers 
+on the opposite side of the equals sign as another column, as so
+
+\begin{equation*}
+		\left(\begin{array}{rrrr}
+				5 & -3 & 2 & 0  \\
+				-1 & 1 & 0 & 2 \\
+				0 & -1 & 1 & 1
+		\end{array}\right)
+\end{equation*}
+
+This is called the \textbf{augmented matrix} of the linear system (\ref{eqn:linear-sys}).
+
+When talking about a matrix, if a matrix $M$ has $m$ rows and $n$ columns,
+then we say that $M$ is of \textbf{size}
+$m\times n$ (read ``$m$ by $n$'').
+\end{definition}
+
+}{% presentation 
+\vspace{2in}
+}{% nopresentation
+}{% comments
+}
+
+\content{
+\begin{example} Find a solution to the following linear system using the elimination method, after each 
+step, write the associated matrix of the linear system.
+\begin{equation*}
+		\begin{array}{rrrr}
+				x & -2y & +z & = 0 \\
+				  & 2y & -8z & = 8 \\
+				5x & & -5z & = 10
+		\end{array}
+\end{equation*}
+\end{example}
+
+}{% presentation 
+\vspace{2in}
+}{% nopresentation
+		After some algebra, we obtain the following system of linear equations, along with its corresponding augmented 
+matrix:\\
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+\begin{align*}
+		x-2y+z &= 0 & \\
+		x-7z &= 8 & \\
+				z&=-1
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+		\begin{equation*}
+		\begin{pmatrix} 1 & -2 & 1 & 0 \\ 1 & 0 & -7 & 8 \\ 0 & 0 & 1 & -1 \end{pmatrix}
+		\end{equation*}
+\end{minipage}
+\end{center} 
+In the process of elimination, and solving the system, at each step when we write out the augmented matrix of the linear system, 
+we see that the same operations we perform on the system are reflected in the matrix. This motivates the following definition.
+}{% comments
+}
+
+\content{
+\begin{definition} (Elementary Row Operations) 
+\begin{enumerate}
+		\item (Multiply Row Add) One row is replaced by the sum of itself and a nonzero multiple of 
+				another row.
+		\item (Scale) One row is replaced by a multiple of itself.
+		\item (Row Swap) Two rows swap positions.
+\end{enumerate}
+\end{definition}
+
+\begin{definition} Two matrices are said to be \textbf{row equivalent} if there is some sequence of 
+elementary row operations transforming one into the other. 
+\end{definition}
+
+\begin{theorem}
+		If the augmented matrices of two linear systems are row equivalent, then the two 
+systems have the same solution set.
+\end{theorem}
+}{% presentation
+}{% nopresentation
+}{% comments
+}
