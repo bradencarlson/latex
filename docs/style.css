@@ -8,6 +8,12 @@ html, body {
 body {
 }
 
+code {
+  background-color: #ddd;
+  border-radius: 5px;
+  color: #222;
+}
+
 /**************************************************
  * Top
  **************************************************/
@@ -34,19 +40,16 @@ body {
  **************************************************/
 
 .sidebar {
+  position: fixed;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-image: linear-gradient(to right, #353,#333);
   color: white;
+  width: 273px;
 }
 
-.title {
-  font-size: 3em;
-  font-family: "Libertinus Serif", serif;
-  padding: 10px;
-}
 
 .navbar {
   display: flex;
@@ -60,6 +63,13 @@ body {
   background: none;
   text-align: left;
   color: white;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 3em;
+  font-family: "Libertinus Serif", serif;
+  padding: 10px;
 }
 
 
@@ -68,10 +78,10 @@ body {
  **************************************************/
 
 .content {
+  color: white;
+  margin-left: 273px;
   background-color: #333;
   width: 100%;
-  height: 100%;
-  color: white;
 }
 
 /**************************************************
@@ -79,6 +89,7 @@ body {
  **************************************************/
 
 .splash {
+  background-color: #333;
   display: inline-block;
   height: 100%;
   align-content: center;
@@ -89,4 +100,48 @@ body {
 .splash-description {
   font-size: 30px;
   text-align: left;
+}
+
+/**************************************************
+ * Installation Page
+ **************************************************/
+
+.installation {
+  background-color: #333;
+  display: inline-block;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 25px;
+}
+
+/**************************************************
+ * Documentation Page
+ **************************************************/
+
+.documentation {
+  background-color: #333;
+  display: inline-block;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 25px;
+}
+
+.inline-code {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.code-block {
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.font-20 {
+  font-size: 20px;
 }
