@@ -1,9 +1,12 @@
 \documentclass{notes}
 \usepackage{amsmath,amstext,amssymb}
+\usepackage{hyperref}
 
 \begin{document}
 
-\section{Definitions and Examples}
+\section{Linear Equations and Matrices}
+
+\subsection{Definitions and Examples}
 
 \content{
 \begin{definition} A \textbf{linear equation} in variables $x_1,x_2,\dots x_n$ is an equation that 
@@ -32,12 +35,14 @@ Solution:
 \begin{enumerate}
         \item This is a linear equation since it is of the form in the definition above.
         \item This is \textbf{not} a linear equation.  The presence of the $x_1^2$, as well 
-                as the $x_1x_2$ show that it is not of the form in the definition, and in fact, 
+                as the term $x_1x_2$ show that it is not of the form in the definition, and in fact, 
                 cannot be put into the form above, so this is not linear.
         \item This is also not a linear equation.  Similarly to number 2, this equation cannot 
                 be manipulated into the correct form for a linear equation, so it is not linear. 
 \end{enumerate}
 }{% comments
+Proving that the equations cannot be put into linear form is not needed here for
+this class. 
 }
 
 \content{
@@ -121,6 +126,8 @@ is the coefficients of the variable $y$, and the last column is the coefficients
 of the variable $z$.  Similarly, 
 each row corresponds to one of the equations of the system. 
 }{% comments
+Mention that the first column corresponds to the coefficients of the first
+variable, the second column with those of the second variable, and so on. 
 }
 
 \content{
@@ -184,6 +191,11 @@ matrix:\\
 In the process of elimination, and solving the system, at each step when we write out the augmented matrix of the linear system, 
 we see that the same operations we perform on the system are reflected in the matrix. This motivates the following definition.
 }{% comments
+The resulting matrix should be 
+$$\begin{pmatrix} 1 & -2 & 1 & 0 \\ 1 & 0 & -7 & 8 \\ 0 & 0 & 1 & -1
+\end{pmatrix}$$
+For now, we stop because we know the value of $z$, and can then find $x$
+and $y$. 
 }
 
 \content{
