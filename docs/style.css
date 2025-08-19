@@ -18,11 +18,6 @@ html, body {
 body {
 }
 
-code {
-  background-color: #ddd;
-  border-radius: 5px;
-  color: #222;
-}
 
 /**************************************************
  * Top
@@ -157,4 +152,82 @@ code {
 
 .font-20 {
   font-size: 20px;
+}
+
+.keyword {
+}
+
+.description {
+  margin-left: 8%;
+}
+
+/**************************************************
+ * Example Page
+ **************************************************/
+
+.example {
+  background-color: var(--background);
+  display: inline-block;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 25px;
+}
+
+.landscape-image {
+  width: 50%;
+  height: 38.6%;
+}
+
+.portrait-image {
+  height: 50%;
+  width: 38.6%;
+
+}
+
+.image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.vertical-separator {
+  height: 150px;
+}
+
+.tex-code {
+  width: 100%;
+  font-size: 12px;
+  max-height: 400px;
+  overflow: auto;
+  border: 1px solid var(--white);
+  padding:5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+
+/**************************************************
+ * Syntax Highlighting
+ **************************************************/
+
+
+.orange {
+  color: var(--orange);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.red {
+  color: var(--red);
+}
+
+.code-white {
+  color: var(--code-white);
+}
+.comment {
+  color: var(--comment);
 }

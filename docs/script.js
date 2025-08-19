@@ -53,9 +53,26 @@ async function loadDocumentation() {
   }
 }
 
+async function loadExample() {
+  try {
+    const response = await fetch("./example.html")
+
+    if (!response.ok) {
+      throw new Error("Something went wrong loading the example page.")
+    }
+
+    const content = await response.text()
+    const div = document.querySelector("div[id=content]")
+
+    div.innerHTML = content;
+  } catch (error) {
+    throw new Error(error.error)
+  }
+}
+
 
 /**************************************************
- * Load Pages
+ * Events
  **************************************************/
 
 function addEventListeners() {
@@ -72,6 +89,7 @@ function addEventListeners() {
         button.addEventListener("click", loadDocumentation)
         break;
       case "example":
+        button.addEventListener("click", loadExample)
         break;
       default:
         break;
