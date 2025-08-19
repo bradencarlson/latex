@@ -1,3 +1,13 @@
+:root {
+    --background: #222;
+    --fade: #003049;
+    --white: #ddd;
+    --red: #d62828;
+    --orange: #f77f00;
+    --yellow: #fcbf49;
+    --code-white: #eae2b7;
+    --comment: #00e3f7;
+}
 html, body {
   margin: 0px;
   padding: 0px;
@@ -45,8 +55,8 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: linear-gradient(to right, #353,#333);
-  color: white;
+  background-image: linear-gradient(to right, var(--fade),var(--background));
+  color: var(--white);
   width: 273px;
 }
 
@@ -62,7 +72,7 @@ code {
   border: none;
   background: none;
   text-align: left;
-  color: white;
+  color: var(--white);
   font-size: 20px;
 }
 
@@ -78,9 +88,9 @@ code {
  **************************************************/
 
 .content {
-  color: white;
+  color: var(--white);
   margin-left: 273px;
-  background-color: #333;
+  background-color: var(--background);
   width: 100%;
 }
 
@@ -89,7 +99,7 @@ code {
  **************************************************/
 
 .splash {
-  background-color: #333;
+  background-color: var(--background);
   display: inline-block;
   height: 100%;
   align-content: center;
@@ -107,7 +117,7 @@ code {
  **************************************************/
 
 .installation {
-  background-color: #333;
+  background-color: var(--background);
   display: inline-block;
   padding-left: 15%;
   padding-right: 15%;
@@ -119,7 +129,7 @@ code {
  **************************************************/
 
 .documentation {
-  background-color: #333;
+  background-color: var(--background);
   display: inline-block;
   padding-left: 15%;
   padding-right: 15%;
@@ -127,13 +137,16 @@ code {
 }
 
 .inline-code {
+  background-color: var(--white);
+  border-radius: 5px;
+  color: var(--background);
   padding-left: 4px;
   padding-right: 4px;
 }
 
 .code-block {
-  background-color: #333;
-  color: white;
+  background-color: var(--background);
+  color: var(--white);
   font-size: 20px;
   padding-left: 2px;
   padding-right: 2px;
