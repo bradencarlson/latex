@@ -1,5 +1,11 @@
 <div id="documentation" class="documentation">
   <h2>Documentation</h2>
+  <p>This page contains the documentation for all commands defined in class file as
+  well as the accompanying package. Keywords and commands are located to the
+  very left, and their command declarations (if applicable) and explainations
+  are indented below them.</p>
+  <p><div class="note">Note:</div>Currently, the hyperref package is required by this package to render the
+  pages correctly. This will be fixed in a future version.</p>
   <p class="keyword">Content</p>
   <div class="function-declaration">
     <code class="inline-code">\content{main}{pres}{nopres}{comment}</code>
@@ -22,5 +28,12 @@
   nopres</code> option, as this often contains solutions to problems which can
   be quite long. 
   </p>
+  <p><div class="note">Note:</div> If the comment parameter is nonempty, the
+  class will draw a box around it, even if the comment parameter is just blank
+  space. To avoid boxes where you do not want them, it is recommended to either use the 
+  <code class="inline-code">%</code> operator in your LaTeX code immediately
+  after the opening brace of the comment parameter, followed on the next line by
+  the closing brace, or to simply leave the comment parameter completely empty
+  like so: <code class="inline-code">{}</code>.
   </div>
 </div>

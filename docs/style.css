@@ -93,6 +93,7 @@ body {
   background-color: var(--background);
   width: 100%;
   font-family: var(--font);
+  padding-bottom: 25px;
 }
 
 /**************************************************
@@ -165,6 +166,10 @@ body {
 
 .description {
   margin-left: 8%;
+}
+
+.note {
+  color: var(--orange);
 }
 
 /**************************************************
