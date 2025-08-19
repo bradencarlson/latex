@@ -4,55 +4,20 @@
   <div class="description">
   <p>Mandatory parameters: 
   <ol>
-    <li> main - content to be shown in both versions of the file.</li>
-    <li> pres - content to be shown in the presentation version of the file
+    <li> <code class="inline-code">main</code> - content to be shown in both versions of the file.</li>
+    <li> <code class="inline-code">pres</code> - content to be shown in the presentation version of the file
       only.</li>
-    <li> nopres - content to be shown in the nonpresentation version of the file
+    <li> <code class="inline-code">nopres</code> - content to be shown in the nonpresentation version of the file
       only.</li>
-    <li> comment - comments to be shown to the right of pres in the presentation
+    <li> <code class="inline-code">comment</code> - comments to be shown to the right of pres in the presentation
       version of the file.</li>
   </ol>
   Each of these may be any LaTeX commands you wish. They are all defined useing
-  the <code class="inline-code font-20 yellow">\long</code> keyword, meaning
+  the <code class="inline-code">\long</code> keyword, meaning
   that the content of each of these is permitted to contain more than one
-  paragraph. This is particularly useful for the <code class="inline-code yellow font-20">
+  paragraph. This is particularly useful for the <code class="inline-code">
   nopres</code> option, as this often contains solutions to problems which can
   be quite long. 
   </p>
   </div>
-<!---  <p class="description">The biggest feature of the class file is the 
-  <code style="font-size: 20px;">content</code> command.
-  This command takes four required arguments: 
-  <pre>
-  <code class="code-block">
-    \content{
-      main
-    }{
-      presentation
-    }{
-      nonpresentation
-    }{
-      comments
-    }
-  </code>
-  </pre>
-  </p>
-  <p>The <code class="inline-code font-20">main</code> argument can be anything you
-  want displayed in both versions of the file (theorems, the statements for
-  examples and problems, etc.). </p>
-  <p>The <code class="inline-code font-20">presentation</code> argument is anything
-  that should be visible in the skeleton lecture notes, but not visible in the
-  nonpresentation version of the file (blank space for working examples for
-  example). If the <code class="inline-code font-20">presentation</code>
-  option is passed to the class, this and the <code class="inline-code font-20">main</code> 
-  will be shown in the first of two columns, which by default is
-  7.25 inches wide (the page layout is landscape).</p>
-  <p>The <code class="inline-code font-20">nonpresentation</code> argument is
-  similar to the <code class="inline-code font-20">presentation</code> argument,
-  only that this is only visible in the nonpresentation version of the file.
-  This could be used for solutions to examples, proofs of theorems, etc.</p>
-  <p>The <code class="inline-code font-20">comments</code> argument is displayed in the second
-  column in the presentation version of the file, which by default is 2.25
-  inches wide.</p> 
---->  
 </div>

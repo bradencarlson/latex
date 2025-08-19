@@ -7,6 +7,9 @@
     --yellow: #fcbf49;
     --code-white: #eae2b7;
     --comment: #00e3f7;
+
+    --title-font: "Libertinus Serif", serif;
+    --menu-font: "Libertinus Serif", serif;
 }
 html, body {
   margin: 0px;
@@ -69,11 +72,12 @@ body {
   text-align: left;
   color: var(--white);
   font-size: 20px;
+  font-family: var(--menu-font);
 }
 
 .title {
   font-size: 3em;
-  font-family: "Libertinus Serif", serif;
+  font-family: var(--title-font);
   padding: 10px;
 }
 
@@ -132,11 +136,8 @@ body {
 }
 
 .inline-code {
-  background-color: var(--white);
-  border-radius: 5px;
-  color: var(--background);
-  padding-left: 4px;
-  padding-right: 4px;
+  color: var(--yellow);
+  font-size: 20px;
 }
 
 .code-block {
@@ -150,9 +151,6 @@ body {
   margin: 0px;
 }
 
-.font-20 {
-  font-size: 20px;
-}
 
 .keyword {
 }
