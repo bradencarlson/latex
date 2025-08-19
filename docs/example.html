@@ -4,13 +4,14 @@
   example taken from a lecture for linear algebra. As you can see below, each 
   element of the lecture
   implements the <code class="inline-code">\content</code> command to
-  manage different content based on whether or not the presentation option is
-  used. In the LaTeX for this example, comments have been added to help see
-  where the <code class="inline-code">main</code>, <code
+  manage different content based on whether or not the 
+  <code class="inline-code">presentation</code> option is
+  used. In the LaTeX for this example, comments have been added so that
+  the <code class="inline-code">main</code>, <code
                   class="inline-code">pres</code>, <code
                   class="inline-code">nopres</code>, and <code
                   class="inline-code">comment</code> arguments for the <code
-                  class="inline-code">\content</code> command are clearly seen.
+                  class="inline-code">\content</code> command can be clearly seen.
   Also, while there are several pages worth of lecture notes defined in the code
   below, we only show the first page in the figure below. Here is the LaTeX for
   the example.</p> 
@@ -315,7 +316,7 @@ systems have the same solution set.
                content (minus the comments) as the landscape notes, along with
                solutions" src="./images/nopresentation-1.jpg" class="portrait-image">
   </div>
-  <p if="example-description-two" class="example-description">The file on the
+  <p id="example-description-two" class="example-description">The file on the
   left was compiled with the <code class="inline-code">presentation</code> 
   option, while the file on the right was
   compiled from the same TeX document with the <code
