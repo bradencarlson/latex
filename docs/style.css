@@ -11,6 +11,8 @@
     --title-font: "Libertinus Serif", serif;
     --menu-font: "Libertinus Serif", serif;
     --font: "Libertinus Serif", serif;
+
+    --block-code-background: #444;
 }
 html, body {
   margin: 0px;
@@ -125,6 +127,15 @@ body {
   padding-left: 15%;
   padding-right: 15%;
   font-size: 25px;
+}
+
+.bash {
+  background-color: var(--block-code-background);
+  color: var(--font);
+  font-size: 20px;
+  font-family: "monospace";
+  border-radius: 5px;
+  padding: 5px;
 }
 
 /**************************************************
