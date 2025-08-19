@@ -10,6 +10,7 @@
 
     --title-font: "Libertinus Serif", serif;
     --menu-font: "Libertinus Serif", serif;
+    --font: "Libertinus Serif", serif;
 }
 html, body {
   margin: 0px;
@@ -91,6 +92,7 @@ body {
   margin-left: 273px;
   background-color: var(--background);
   width: 100%;
+  font-family: var(--font);
 }
 
 /**************************************************
@@ -108,6 +110,7 @@ body {
 
 .splash-description {
   font-size: 30px;
+  font-family: var(--font);
   text-align: left;
 }
 
@@ -153,6 +156,11 @@ body {
 
 
 .keyword {
+
+}
+
+.function-declaration {
+  margin-left: 4%;
 }
 
 .description {
