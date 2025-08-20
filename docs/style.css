@@ -92,6 +92,10 @@ body {
   font-family: var(--menu-font);
 }
 
+.navbar-item:hover {
+  color: var(--orange);
+}
+
 .title {
   font-size: 3em;
   font-family: var(--title-font);
