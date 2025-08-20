@@ -1,41 +1,62 @@
 <div id="documentation" class="documentation">
   <h2>Documentation</h2>
-  <p>This page contains the documentation for all commands defined in class file as
-  well as the accompanying package. Keywords and commands are located to the
-  very left, and their command declarations (if applicable) and explanations
-  are indented below them.</p>
-  <p><div class="note">Note:</div>Currently, the hyperref package is required by this package to render the
-  pages correctly. This will be fixed in a future version.</p>
+    <p>This page contains the documentation for all commands defined in class file as
+    well as the accompanying package. Keywords and commands are located to the
+    very left, and their command declarations (if applicable) and explanations
+    are indented below them.</p>
+    <p><div class="note">Note:</div>Currently, the hyperref package is required by this package to render the
+    pages correctly. This will be fixed in a future version.
+    </p>
+
+  <h3>Notes Class Documentation</h3>
   <p class="keyword">Content</p>
   <div class="function-declaration">
     <code class="inline-code">\content{main}{pres}{nopres}{comment}</code>
   </div>
   <div class="description">
-  <p>Mandatory parameters: 
-  <ol>
-    <li> <code class="inline-code">main</code> - content to be shown in both versions of the file.</li>
-    <li> <code class="inline-code">pres</code> - content to be shown in the presentation version of the file
-      only.</li>
-    <li> <code class="inline-code">nopres</code> - content to be shown in the
-      non-presentation version of the file
-      only.</li>
-    <li> <code class="inline-code">comment</code> - comments to be shown to the right of 
-      <code class="inline-code">pres</code> in the presentation
-      version of the file.</li>
-  </ol>
-  Each of these may be any LaTeX commands you wish. They are all defined using
-  the <code class="inline-code">\long</code> keyword, meaning
-  that the content of each of these is permitted to contain more than one
-  paragraph. This is particularly useful for the <code class="inline-code">
-  nopres</code> option, as this often contains solutions to problems which can
-  be quite long. 
-  </p>
-  <p><div class="note">Note:</div> If the comment parameter is nonempty, the
-  class will draw a box around it, even if the comment parameter is just blank
-  space. To avoid boxes where you do not want them, it is recommended to either use the 
-  <code class="inline-code">%</code> operator in your LaTeX code immediately
-  after the opening brace of the comment parameter, followed on the next line by
-  the closing brace, or to simply leave the comment parameter completely empty
-  like so: <code class="inline-code">{}</code>.
+    <p>Mandatory parameters: 
+    <ol>
+      <li> <code class="inline-code">main</code> - content to be shown in both versions of the file.</li>
+      <li> <code class="inline-code">pres</code> - content to be shown in the presentation version of the file
+        only.</li>
+      <li> <code class="inline-code">nopres</code> - content to be shown in the
+        non-presentation version of the file
+        only.</li>
+      <li> <code class="inline-code">comment</code> - comments to be shown to the right of 
+        <code class="inline-code">pres</code> in the presentation
+        version of the file.</li>
+    </ol>
+    Each of these may be any LaTeX commands you wish. They are all defined using
+    the <code class="inline-code">\long</code> keyword, meaning
+    that the content of each of these is permitted to contain more than one
+    paragraph. This is particularly useful for the <code class="inline-code">
+    nopres</code> option, as this often contains solutions to problems which can
+    be quite long. 
+    </p>
+    <p><div class="note">Note:</div> If the comment parameter is nonempty, the
+    class will draw a box around it, even if the comment parameter is just blank
+    space. To avoid boxes where you do not want them, it is recommended to either use the 
+    <code class="inline-code">%</code> operator in your LaTeX code immediately
+    after the opening brace of the comment parameter, followed on the next line by
+    the closing brace, or to simply leave the comment parameter completely empty
+    like so: <code class="inline-code">{}</code>.
+  </div>
+  <p class="keyword">Phantom</p>
+  <div class="function-declaration">
+    <code class="inline-code">\phantom{pres}{nopres}</code>
+  </div>
+  <div class="description">
+    <p>Mandatory Parameters:
+    <ol>
+      <li> <code class="inline-code">pres</code> - content to be shown when the
+        presentation option is specified. </li>
+      <li> <code class="inline-code">nopres</code> - content to be shwon when
+        the nopresentation option is specified. </li>
+    </ol>
+    This command is defined using the <code class="inline-code">\long</code>
+    command, so each of the parameters may be as long as needed. This command
+    was included for backwards compatibility in a previous version of the notes
+    class. 
+    </p>
   </div>
 </div>
