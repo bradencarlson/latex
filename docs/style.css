@@ -31,9 +31,15 @@ body {
  **************************************************/
 .top {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
+}
+
+@media (width <= 1100px) or (aspect-ratio <= 0.75) {
+  .top {
+    flex-direction: column;
+  }
 }
 
 
@@ -48,19 +54,24 @@ body {
   padding-right: 10px;
 }
 
+@media (width <= 1100px) or (aspect-ratio <= 0.75) {
+  .separator {
+    display: none;
+  }
+}
 /**************************************************
  * Sidebar
  **************************************************/
 
 .sidebar {
-  position: fixed;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-image: linear-gradient(to right, var(--fade),var(--background));
   color: var(--white);
-  width: 273px;
+  width: 15%;
+  max-width: 273px;
 }
 
 
@@ -85,8 +96,25 @@ body {
   font-size: 3em;
   font-family: var(--title-font);
   padding: 10px;
+  z-index: 3;
 }
 
+@media (width <= 1100px) or (aspect-ratio <= 0.75) {
+  .sidebar {
+    min-height: 50px;
+    max-width: none;
+    width: 100%;
+    align-items: baseline;
+    flex-direction: row;
+    color: var(--white);
+  }
+  .navbar {
+    display: flex;
+    padding-left: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 
 /**************************************************
  * Content
@@ -94,7 +122,6 @@ body {
 
 .content {
   color: var(--white);
-  margin-left: 273px;
   background-color: var(--background);
   width: 100%;
   font-family: var(--font);
@@ -192,20 +219,20 @@ body {
 
 .example {
   background-color: var(--background);
-  display: inline-block;
   padding-left: 15%;
   padding-right: 15%;
   font-size: 25px;
+  max-width: 100%;
 }
 
 .landscape-image {
-  width: 50%;
-  height: 38.6%;
+  max-width: 50%;
+  max-height: 38.6%;
 }
 
 .portrait-image {
-  height: 50%;
-  width: 38.6%;
+  max-height: 50%;
+  max-width: 38.6%;
 
 }
 
@@ -222,7 +249,7 @@ body {
 }
 
 .tex-code {
-  width: 100%;
+  max-width: 100%;
   font-size: 12px;
   max-height: 400px;
   overflow: auto;
@@ -261,22 +288,3 @@ body {
  * Small screen settings
  **************************************************/
 
-@media (width <= 900px) {
-  .sidebar {
-    position: fixed;
-    height: 150px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--fade);
-    color: var(--white);
-  }
-  .navbar {
-    display: flex;
-    padding-left: 10px;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
