@@ -6,6 +6,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mathcommands}
+\RequirePackage{hyperref}
 
 \newcommand{\supp}{\text{supp}}
 
@@ -47,7 +48,7 @@
 % Due to the use of custom environments, when using the hyperref package the
 % following line must be added to properly reference these environments. 
 %
-%    \renewcommand{\theHtheorem}{mythm.\thesection.\thetheorem}
+\renewcommand{\theHtheorem}{mythm.\thesection.\thetheorem}
 %
 
 % Provides the theorem environment.
